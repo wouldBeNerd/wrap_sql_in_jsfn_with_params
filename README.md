@@ -13,7 +13,6 @@ after wrapping the n-teenth SQL report in quotations and making sure I didnt for
 I needed this because our company uses an old ERP package that programmatically parameterizes the SQL tablenames. To date I have wrapped ((143-1)/2) SQL queries. I imagine they did this in order to save on SQL database licensing fees. SQL does not allow for tablename paramtererization so was not able to use tedious for all parameters.
 
 ### Example
-
 SQL Code
 ```sql
 
@@ -22,9 +21,8 @@ select sum(Amount) as Amount from [ShowTex Belgie NV$G_L Entry] --table_name par
 where [G_L Account No_] like '777%' --switched for GL_no variable
 and [Global Dimension 1 Code] in ('_NVT','') --switched for Interco_code variable
 --end
-
-SQL Code wrapped and parameterized in JS
 ```
+SQL Code wrapped and parameterized in JS
 ```javascript
 module.exports = function(company,GL_no,interco_code){
 return " "/*--example starts here*/+
@@ -34,3 +32,14 @@ return " "/*--example starts here*/+
 " "/*--end*/+
 }
 ```
+by entering the following parameters at top of wrap_SQL.js file
+```javascript
+//CONFIG PARAMS (filename, [parameter names], [parameter values to replace])
+build_query("GL_sum",//name of import file will be same as export file, extension will be .js
+    ["company","GL_no", "interco_code"], //variable/parameter names
+    ["ShowTex Belgie NV", "777%", "'_NVT',''"] //values of above parameters to replace 
+)
+}
+```
+
+
