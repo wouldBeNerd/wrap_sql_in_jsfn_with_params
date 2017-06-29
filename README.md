@@ -14,6 +14,7 @@ I needed this because our company uses an old ERP package that programmatically 
 
 ### Example
 
+SQL Code
 ```sql
 
 --example starts here
@@ -22,7 +23,7 @@ where [G_L Account No_] like '777%' --switched for GL_no variable
 and [Global Dimension 1 Code] in ('_NVT','') --switched for Interco_code variable
 --end
 
-
+SQL Code wrapped and parameterized in JS
 ```
 ```javascript
 module.exports = function(company,GL_no,interco_code){
