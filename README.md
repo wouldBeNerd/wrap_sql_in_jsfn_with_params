@@ -2,10 +2,10 @@
 reads an sql script and writes it to a javascript function that returns said sql script as string, switches out parameters which it then includes in the function call
 
 ### how to use:
-⋅⋅* move wrap_SQL.js to same location as sql script file you wish to wrap
-⋅⋅* adjust filename, parameters and values in top of wrap_SQL.js file 
-⋅⋅* save file (Duuh)
-⋅⋅* execute in cmd.exe 'node wrap_SQL.js'
+* move wrap_SQL.js to same location as sql script file you wish to wrap
+* adjust filename, parameters and values in top of wrap_SQL.js file 
+* save file (Duuh)
+* execute in cmd.exe 'node wrap_SQL.js'
 
 ### why!?
 I run a node reporting server that uses tedious to disperse parameterized reports through mailings and websites to internal user.
