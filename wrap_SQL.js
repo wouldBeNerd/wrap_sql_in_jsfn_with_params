@@ -1,7 +1,7 @@
 //CONFIG PARAMS (filename, [parameter names], [parameter values to replace])
 build_query("GL_sum",//name of import file will be same as export file, extension will be .js
     ["company","GL_no", "interco_code"], //variable/parameter names
-    ["ShowTex Belgie NV", "777%", "'_NVT',''"] //values of above parameters to replace 
+    ["Comp Name", "777%", "'_NVT',''"] //values of above parameters to replace 
 )
 //console.log('\n') //NEW LINE PROBLEMS I TRIED TO USE THE CORRECT METHOD require('os').EOL INSTEAD , but it did not work
 function build_query(file_name, variable_arr, value_arr){
