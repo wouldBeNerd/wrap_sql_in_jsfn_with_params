@@ -1,0 +1,19 @@
+{
+  "name": "wrap_sql",
+  "version": "1.0.1",
+  "description": "wraps SQL into a JS file with parameters.",
+  "main": "wrap_SQL.js",
+  "scripts": {
+    "test": "node wrap_SQL.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "wrap_sql_in_jsfn_with_params"
+  },
+  "keywords": [
+    "SQL",
+    "toString"
+  ],
+  "author": "mattias lemmens <mattias.lemmens@showtex.com>",
+  "license": "MIT"
+}
