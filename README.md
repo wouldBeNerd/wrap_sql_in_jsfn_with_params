@@ -1,9 +1,9 @@
 # wrap_sql_in_jsfn_with_params
-reads an sql script and writes it to a javascript function that returns said sql script as string, switches out parameters which it then includes in the function call
+reads an sql script file and writes it to a javascript file function that returns said sql script as string, switches out parameters which it then includes in the function call
 
 ### how to use:
-* move wrap_SQL.js to same location as sql script file you wish to wrap
-* adjust filename, parameters and values in top of wrap_SQL.js file 
+* require wrap_sql
+* pass in the following parameters (filename without extension as string, array of parameters array of parameter values to replace)
 * save file (Duuh)
 * execute in cmd.exe `node wrap_SQL.js`
 
@@ -35,11 +35,11 @@ return " "/*--example starts here*/+
 by entering the following parameters at top of wrap_SQL.js file
 ```javascript
 //CONFIG PARAMS (filename, [parameter names], [parameter values to replace])
-build_query("GL_sum",//name of import file will be same as export file, extension will be .js
+let wrap_sql = require("wrap_sql")
+wrap_sql("GL_sum",//name of import file will be same as export file, extension will be .js
     ["company","GL_no", "interco_code"], //variable/parameter names
     ["Comp Name", "777%", "'_NVT',''"] //values of above parameters to replace 
 )
-}
 ```
 
 
